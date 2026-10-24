@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог — МебельДива</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">МебельДива</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Открыть навигацию">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a></li>
+            <li class="nav-item"><a class="nav-link" href="product.html">Товар</a></li>
+            <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5 flex-grow-1">
+    <div class="alert alert-info" role="alert">
+      Выберите товар из каталога. Карточки оформлены с помощью компонента Bootstrap `card`.
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1 class="h2 mb-0">Каталог товаров</h1>
+      <a class="btn btn-outline-primary" href="order.html">Оставить заявку</a>
+    </div>
+
+    <div class="row g-4">
+      <!-- Товар 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/item-1.jpg" class="card-img-top" alt="Диван Босые ноги">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h2 class="card-title h5">Диван «Босые ноги»</h2>
+              <span class="badge text-bg-success">Новинка</span>
+            </div>
+            <p class="card-text text-muted">Диван, который так и просится, чтобы вы с него не вставали.</p>
+            <p class="fw-bold fs-5 mt-auto">от 120 000 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Товар 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/item-2.jpg" class="card-img-top" alt="Кресло Лыжник">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h2 class="card-title h5">Кресло «Лыжник»</h2>
+              <span class="badge text-bg-warning">Хит</span>
+            </div>
+            <p class="card-text text-muted">Красное кресло на металлических ногах.</p>
+            <p class="fw-bold fs-5 mt-auto">от 95 000 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Товар 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/item-3.jpg" class="card-img-top" alt="Диван Хищник">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h2 class="card-title h5">Диван «Хищник»</h2>
+              <span class="badge text-bg-danger">Скидка</span>
+            </div>
+            <p class="card-text text-muted">Бархатистый тигр, который притворяется диваном.</p>
+            <p class="fw-bold fs-5 mt-auto">от 210 000 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Модальное окно -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="orderModalLabel">Быстрая заявка</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted">Оставьте контактные данные, и менеджер свяжется с вами.</p>
+          <form>
+            <div class="mb-3">
+              <label for="modal-name" class="form-label">Ваше имя</label>
+              <input id="modal-name" type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="modal-phone" class="form-label">Телефон</label>
+              <input id="modal-phone" type="tel" class="form-control" required>
+            </div>
+            <div class="form-check mb-3">
+              <input id="modal-agree" class="form-check-input" type="checkbox" required>
+              <label class="form-check-label" for="modal-agree">Согласен на обработку данных</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2026 Мастерская «МебельДива».</p>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Товар — МебельДива</title>
+  <link rel="icon" href="data:,">
+  <!-- Подключение локального Bootstrap -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Навигация -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">МебельДива</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="product.html">Товар</a></li>
+            <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5 flex-grow-1">
+    <!-- Хлебные крошки (Breadcrumb) -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Диван «Босые ноги»</li>
+      </ol>
+    </nav>
+
+    <!-- Основная карточка товара -->
+    <div class="row g-4 mb-5">
+      <div class="col-12 col-lg-6">
+        <div class="card shadow-sm h-100">
+          <!-- Замените item-1.jpg на нужную картинку, если хотите -->
+          <img src="images/item-1.jpg" class="card-img-top" alt="Диван Босые ноги" style="object-fit: cover; height: 100%; min-height: 400px;">
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+        <div>
+          <span class="badge text-bg-success mb-3 fs-6">Новинка</span>
+          <h1 class="h2 fw-bold mb-3">Диван «Босые ноги»</h1>
+          <p class="lead text-muted mb-4">
+            Диван, который так и просится, чтобы вы с него не вставали. Создан для тех, кто ценит комфорт и не боится показать миру свои ступни.
+          </p>
+          <p class="fs-3 fw-bold text-primary mb-4">от 120 000 ₽</p>
+          <div class="d-flex gap-3 mb-4">
+            <a class="btn btn-primary btn-lg px-4" href="order.html">Оформить заявку</a>
+            <a class="btn btn-outline-secondary btn-lg px-4" href="catalog.html">Назад в каталог</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Дополнительный компонент: Аккордеон (Частые вопросы) -->
+    <section class="mt-5">
+      <h2 class="h4 mb-3">Характеристики и вопросы</h2>
+      <div class="accordion shadow-sm" id="productAccordion">
+        
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Из каких материалов сделана эта мебель?
+            </button>
+          </h3>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#productAccordion">
+            <div class="accordion-body">
+              Каркас изготовлен из прочного металла, обивка — из высококачественной экокожи, ножки — из алюминия. Мебель прослужит долгие годы.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Сколько времени занимает изготовление?
+            </button>
+          </h3>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+            <div class="accordion-body">
+              Так как каждый предмет уникален, изготовление занимает от 3 до 6 недель в зависимости от сложности эскиза и материалов.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Возможна ли доставка в другой город?
+            </button>
+          </h3>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+            <div class="accordion-body">
+              Да, мы осуществляем доставку по всей России. Стоимость доставки рассчитывается индивидуально в зависимости от габаритов и региона.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2026 Мастерская «МебельДива». Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Подключение локального JS Bootstrap (нужно для Аккордеона) -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

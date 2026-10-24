@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Мастерская необычной мебели МебельДива на Bootstrap 5">
+  <title>Главная — МебельДива</title>
+  <link rel="icon" href="data:,">
+  <!-- Подключение локального Bootstrap из папки vendor -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Навигация (Navbar) -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">МебельДива</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Открыть навигацию">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+            <li class="nav-item"><a class="nav-link" href="product.html">Товар</a></li>
+            <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="container my-5 flex-grow-1">
+    <!-- Hero-блок (Card) -->
+    <section class="card mb-4 shadow-sm" aria-labelledby="hero-title">
+      <div class="card-body p-4 p-md-5">
+        <p class="text-muted mb-2 text-uppercase fw-bold">Мастерская необычной мебели</p>
+        <h1 id="hero-title" class="card-title display-5 fw-bold mb-3">Мебель, которой ещё не существует</h1>
+        <p class="card-text lead mb-4">Вы видели диван в виде гигантских ступней? А кресло из куска сыра? Мы делаем такую мебель на заказ. Придумайте самый странный предмет интерьера — а мы воплотим его в жизнь.</p>
+        <a class="btn btn-primary btn-lg" href="catalog.html">Перейти в каталог</a>
+        <button class="btn btn-outline-primary btn-lg ms-2" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Быстрая заявка</button>
+      </div>
+    </section>
+
+    <!-- Блок популярных товаров (Card + Grid) -->
+    <section id="catalog" class="mb-4" aria-labelledby="featured-title">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 id="featured-title" class="h3 mb-0">Популярные экспонаты</h2>
+        <a href="catalog.html" class="btn btn-outline-secondary">Все товары</a>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Товар 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <p class="mb-2"><span class="badge text-bg-success">Новинка</span></p>
+              <h3 class="card-title h5">Диван «Босые ноги»</h3>
+              <p class="card-text text-muted">Диван, который так и просится, чтобы вы с него не вставали. Создан для ценителей комфорта.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3">от 120 000 ₽</p>
+              <a class="btn btn-primary mt-auto" href="product.html">Подробнее</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Товар 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <p class="mb-2"><span class="badge text-bg-warning">Хит</span></p>
+              <h3 class="card-title h5">Кресло «Лыжник»</h3>
+              <p class="card-text text-muted">Красное кресло с подлокотниками-столами на металлических ногах.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3">от 95 000 ₽</p>
+              <a class="btn btn-primary mt-auto" href="product.html">Подробнее</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Товар 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <p class="mb-2"><span class="badge text-bg-danger">Скидка</span></p>
+              <h3 class="card-title h5">Диван «Хищник»</h3>
+              <p class="card-text text-muted">Бархатистый тигр, который притворяется диваном. Охраняет ваш покой.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3">от 210 000 ₽</p>
+              <a class="btn btn-primary mt-auto" href="product.html">Подробнее</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок Alert -->
+    <section class="alert alert-info shadow-sm" role="alert">
+      <h2 class="h5 alert-heading">Как мы работаем</h2>
+      <p class="mb-0">Вы оставляете заявку, мы создаем 3D-макет, согласовываем материалы и изготавливаем мебель вручную. Доставка по всей России.</p>
+    </section>
+
+    <!-- Блок с таблицей (Table) -->
+    <section id="comparison" class="card mb-4 shadow-sm" aria-labelledby="comparison-title">
+      <div class="card-body">
+        <h2 id="comparison-title" class="card-title h4 mb-3">Сравнение материалов</h2>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Материал</th>
+                <th scope="col">Прочность</th>
+                <th scope="col">Вес</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Массив дуба</th><td>Высокая</td><td>Тяжелый</td></tr>
+              <tr><th scope="row">Металл</th><td>Очень высокая</td><td>Средний</td></tr>
+              <tr><th scope="row">Экокожа</th><td>Средняя</td><td>Легкий</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2026 Мастерская «МебельДива». Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Модальное окно (Modal) -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="orderModalLabel">Быстрая заявка</h2>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <form>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label" for="name">Ваше имя</label>
+              <input class="form-control" id="name" name="name" type="text" placeholder="Анна" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="phone">Телефон</label>
+              <input class="form-control" id="phone" name="phone" type="tel" placeholder="+7 (999) 000-00-00" required>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="agree" required>
+              <label class="form-check-label" for="agree">Согласен на обработку данных</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal">Отмена</button>
+            <button class="btn btn-primary" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подключение локального JS Bootstrap -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
